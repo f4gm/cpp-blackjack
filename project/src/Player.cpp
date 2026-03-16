@@ -1,8 +1,12 @@
 #include "Player.h"
 
-Player::Player()
+using namespace std;
+
+Player::Player(string name, long cash)
 {
-    //ctor
+    playerID = generatePlayerID();
+    playerName = name;
+    playerCash = cash;
 }
 
 Player::~Player()
