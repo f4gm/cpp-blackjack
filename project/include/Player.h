@@ -45,7 +45,7 @@ class Player
 
         vector<Card> get_playerHand(){return playerHand;}
 
-
+        bool get_isPlayerStand(){return playerActionStands;}
 
         long get_playerHandScore(){
             long result = 0;
