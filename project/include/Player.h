@@ -1,6 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -37,23 +38,40 @@ class Player
 
         long get_playerCash(){return playerCash;}
         void set_playerCash(long cash){playerCash = cash;}
-        void discountPlayerCash(long cash){playerCash -= cash;}
-        void addPlayerCash(long cash){playerCash += cash;}
 
+        // Add or take player money
+        void discountPlayerCash(long cash
+            playerCash = clamp(playerCash -= cash, 0, 2147483647);
+
+        }
+        void addPlayerCash(long cash){
+            playerCash = clamp(playerCash += cash, 0, 2147483647);
+        }
+
+        // Set player bet
         long get_playetBet(){return playerBet;}
-        void set_playerBet(long bet){playerBet = bet}
+        void set_playerBet(long bet){
+            playerBet = clamp(bet, 0, playerCash);
+        }
 
-        vector<Card> get_playerHand(){return playerHand;}
+        vector<Card> get_playerHand(){
+            return playerHand;
+        }
 
         bool get_isPlayerStand(){return playerActionStands;}
 
         long get_playerHandScore(){
             long result = 0;
-            for (Card card : playerHand) {
-                result += card.get_cardScore();
 
+            if(playerHand != null){
+                for (Card card : playerHand) {
+                    result += card.get_cardScore();
+
+                }
+                return result;
             }
-            return result;
+            return 0;
+
         }
 
 
