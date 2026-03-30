@@ -38,6 +38,9 @@
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Card.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/Crupier.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Player.cpp" />
