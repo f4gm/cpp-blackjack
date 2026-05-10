@@ -1,3 +1,40 @@
+/*
+    Clase: Player
+    Curso: Fundamentos de Programación Orientada a Objetos (FPOO)
+    Universidad del Valle
+
+    Información CRC:
+
+    Clase: Player
+
+    Responsabilidades:
+        - Define el identificador del jugador
+        - Informa el identificador del jugador
+        - Conoce el nombre del jugador
+        - Introduce el nombre del jugador
+        - Informa el nombre del jugador
+        - Introduce el dinero del jugador
+        - Informa el dinero del jugador
+        - Descuenta la cantidad deseada al dinero del jugador
+        - Aumenta la cantidad deseada al dinero del jugador
+        - Informa la mano de cartas que tiene el jugador
+        - Recibe una carta para agregarla a la mano de cartas del jugador
+        - Informa la puntuación de su mano de cartas
+        - Destruye el contenido de la mano de cartas
+        - Para el turno del jugador en la partidad
+        - Informa si el jugador paró el turno en la partida
+        - Introduce la apuesta del jugador
+        - Informa la apuesta del jugador
+        - Informa si el jugador es un Crupier
+
+    Colaboradores:
+        - Colabora con la clase Card para acceder a sus comportamientos que tiene el jugador en la partida
+
+    Autor: Santiago Gil Londoño, Gabriel Giraldo Otalvora, Fernando Andrés Giraldo Mejía
+    Correo: gil.santiago@correounivalle.edu.co, giraldo.gabriel@correounivalle.edu.co, fernando.giraldo@correounivalle.edu.co
+    Fecha: Mayo 2025
+*/
+
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <vector>
