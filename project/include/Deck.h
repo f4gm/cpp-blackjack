@@ -23,22 +23,22 @@
 
 #ifndef DECK_H
 #define DECK_H
+#include "Card.h"
 #include<vector>
 
 using namespace std;
 
-class Deck
-{
+class Deck {
     private:
-        vector<Card>
+        vector<Card> cards;
         void shuffle();
 
     public:
-        void initialize();
+        Deck();
 
-        vector<Card> giveCard(number){
-            return Card;
-        }
+        void initialize();
+        vector<Card> get_cards();
+        Card giveCard();
 };
 
 #endif // DECK_H

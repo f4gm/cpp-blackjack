@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1782680767 source:d:\job\dev\cpp-blackjack\project\main.cpp
+	<iostream>
+	"Deck.h"
+	<iostream>
+	"Utils.h"
+	"Card.h"
+	"Deck.h"
+	"Player.h"
+
+1782677531 d:\job\dev\cpp-blackjack\project\include\deck.h
+	"Card.h"
+	<vector>
+
+1782680410 d:\job\dev\cpp-blackjack\project\include\card.h
+	<string>
+
+1782677538 source:d:\job\dev\cpp-blackjack\project\src\deck.cpp
+	"Deck.h"
+	<algorithm>
+	<random>
+
+1782680365 source:d:\job\dev\cpp-blackjack\project\src\card.cpp
+	"Card.h"
+
+1782679095 source:d:\job\dev\cpp-blackjack\project\src\player.cpp
+	"Player.h"
+	"Utils.h"
+	<cstdlib>
+
+1782678178 d:\job\dev\cpp-blackjack\project\include\player.h
+	"Card.h"
+	<string>
+	<vector>
+	<algorithm>
+	<cstdlib>
+	<ctime>
+
+1782676659 source:d:\job\dev\cpp-blackjack\project\src\game.cpp
+	"Game.h"
+
+1782676971 d:\job\dev\cpp-blackjack\project\include\game.h
+	<vector>
+	<string>
+	"Deck.h"
+	"Player.h"
+
+1782680685 d:\job\dev\cpp-blackjack\project\include\utils.h
+	<vector>
+	"Card.h"
+
+1782680715 source:d:\job\dev\cpp-blackjack\project\src\utils.cpp
+	"Utils.h"
+	<cstdlib>
+	<iostream>
+	<limits>
+

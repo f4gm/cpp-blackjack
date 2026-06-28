@@ -23,23 +23,24 @@
 
 #ifndef CARD_H
 #define CARD_H
-
+#include <string>
 
 using namespace std;
 
-class Card
-{
+class Card {
     private:
-        string suit = "";
-        unsigned short score = 0;
-        bool hide = false;
+        string suit;
+        string name;
+        unsigned short score;
+        bool hide;
 
     public:
-        string get_suit(){return suit;}
+        Card(string suit, string name, unsigned short score);
 
-        unsigned short get_score(){return score;}
-
-        bool get_hide(){return hide;}
+        string get_suit() const;
+        string get_name() const;
+        unsigned short get_score() const;
+        bool get_hide() const;
 
         void hideCard();
         void showCard();

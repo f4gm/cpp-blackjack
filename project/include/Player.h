@@ -37,112 +37,45 @@
 
 #ifndef PLAYER_H
 #define PLAYER_H
+#include "Card.h"
+#include <string>
 #include <vector>
 #include <algorithm>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
-class Player
-{
-
+class Player {
     private:
         string playerID;
-        string playerName = "";
-        long playerCash = 0;
+        string playerName;
+        long playerCash;
         vector<Card> playerHand;
-        bool playerActionStands = false;
-        long playerBet = 0;
-
+        bool playerActionStands;
+        long playerBet;
         bool playerIsCrupier;
-
-
 
     public:
         Player();
-        virtual ~Player();
-
-        string generatePlayerID(){
-            string id;
-
-                // WIP
-
-            return id;
-        }
-
-        string get_playerId(){return playerID;}
-        string get_playerName(){return playerName;}
-        void set_playerName(string name){playerName = name;}
-
-        long get_playerCash(){return playerCash;}
-        void set_playerCash(long cash){playerCash = cash;}
-
-        // Add or take player money
-        void discountPlayerCash(long cash
-            playerCash = clamp(playerCash -= cash, 0, 2147483647);
-
-        }
-        void addPlayerCash(long cash){
-            playerCash = clamp(playerCash += cash, 0, 2147483647);
-        }
-
-        // Set player bet
-        long get_playetBet(){return playerBet;}
-        void set_playerBet(long bet){
-            playerBet = clamp(bet, 0, playerCash);
-        }
-
-        vector<Card> get_playerHand(){
-            return playerHand;
-        }
-
-        bool get_isPlayerStand(){return playerActionStands;}
-
-        long get_playerHandScore(){
-            long result = 0;
-
-            if(playerHand != null){
-                for (Card card : playerHand) {
-                    result += card.get_cardScore();
-
-                }
-                return result;
-            }
-            return 0;
-
-        }
-
-
-        void emptyPlayerhand(){
-            playerHand.clear();
-            playerHand.shrink_to_fit();
-
-        }
-
-        void addCardToPlayerHand(Card card){
-            playerHand.push_back(card);
-
-        }
-
-        // Player actions
-
-        void doStand(){
-            playerActionStands = true;
-        }
-
-        void doStandFlip(){
-            playerActionStands = !playerActionStands;
-        }
-
-
-        // Other
-
-        bool get_playerIsCrupier(){return playerIsCrupier;}
-
-
-
-    protected:
-
-
+        string generatePlayerID();
+        string get_playerId();
+        string get_playerName();
+        void set_playerName(string name);
+        long get_playerCash();
+        void set_playerCash(long cash);
+        void discountPlayerCash(long cash);
+        void addPlayerCash(long cash);
+        long get_playerBet();
+        void set_playerBet(long bet);
+        vector<Card> get_playerHand();
+        bool get_isPlayerStand();
+        long get_playerHandScore();
+        void emptyPlayerhand();
+        void addCardToPlayerHand(Card card);
+        void doStand();
+        void doStandFlip();
+        bool get_playerIsCrupier();
 };
 
 #endif // PLAYER_H
